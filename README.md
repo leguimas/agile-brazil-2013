@@ -16,12 +16,7 @@ Caso queira atualizar a versão do ambiente de produção, basta executar o coma
 mvn appengine:update
 ```
 
-Ambiente de Desenvolvimento
----------------------------
-
-http://dev.dextra-dextranet.appspot.com/
-
 Ambiente de Produção
 ---------------------------
 
-http://prod.dextra-dextranet.appspot.com/
+http://dextranet-agilebr.appspot.com/
