@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<engine>
+	<template selector="#banners-vigentes">
+		<ul class="content-banners">
+			{for banner in banners}
+    			<li>
+    			    {if banner.link }
+                        <a href="${banner.link}" target="_blank">
+                            <img src="${banner.imagemUrl}" class="banner" original-title="${messages.label_publicado_por} ${banner.usuario} ${messages.label_publicado_em} ${banner.dataDeAtualizacao}" />
+                        </a>
+    			    {else}
+                        <img src="${banner.imagemUrl}" class="banner" original-title="${messages.label_publicado_por} ${banner.usuario} ${messages.label_publicado_em} ${banner.dataDeAtualizacao}" />
+    			    {/if}
+    			</li>
+			{/for}	
+		</ul>
+	</template>
+
+	<script>          
+        $('img.banner').tipsy({html:true, gravity:'n'});
+	</script>
+</engine>

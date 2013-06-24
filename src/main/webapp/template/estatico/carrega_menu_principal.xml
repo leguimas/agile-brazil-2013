@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<engine>
+	<template selector="#header_main_menu">
+		<li id="header_main_menu_logo">
+			<a href="#">
+				<span class="icon_header_logo"></span>
+			</a>
+		</li>
+        <li>
+            <a href="http://dexboard-reload.appspot.com/" target="_blank">Dexboard</a>
+        </li>
+		<li>
+			<a href="https://redmine.dextra.com.br/projects/suporte/issues/new" target="_blank">Infra</a>
+		</li>
+		<li>
+			<a href="https://dextranet.dextra.com.br/pma" target="_blank">PMA</a>
+		</li>
+        <li>
+            <a href="https://dextranet.dextra.com.br/wiki/wiki" target="_blank">Wiki</a>
+        </li>
+		<li id="header-main-menu-outros">
+			<a href="#">
+				Ferramentas
+				<span class="shape_arrow_right"></span>
+				<span class="shape_arrow_down"></span>
+			</a>
+			<ul class="header_dropdown">
+                <li>
+                    <a href="http://blogs.dextra.com.br/" target="_blank">Blog da Dextra</a>
+                </li>
+                <li>
+                    <a href="https://dextranet.dextra.com.br/dextraminds" target="_blank">Minds</a>
+                </li>
+                <li>
+                    <a href="https://redmine.dextra.com.br" target="_blank">Redmine</a>
+                </li>
+			</ul>
+		</li>
+	</template>
+	<script>	
+	$(document).ready(function() {
+		headerMenu.start();
+	});
+	</script>
+</engine>

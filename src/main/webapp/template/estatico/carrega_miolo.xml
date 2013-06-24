@@ -1,0 +1,12 @@
+<engine>
+
+	<template selector="#content_left">
+    </template>
+
+    <template selector="#content_right">
+		<div class="block-white">
+			<div id="banners-vigentes"></div>
+			<div id="microposts"></div>
+		</div>
+	</template>
+</engine>

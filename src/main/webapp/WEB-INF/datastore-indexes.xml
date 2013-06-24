@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="true">
+
+ 	<datastore-index kind="br.com.dextra.dextranet.comment.Comment" ancestor="false" source="manual">
+        <property name="idReference" direction="asc"/>
+        <property name="dataDeCriacao" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="br.com.dextra.dextranet.banner.Banner" ancestor="false" source="manual">
+        <property name="dataInicio" direction="asc"/>
+        <property name="dataFim" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="br.com.dextra.dextranet.conteudo.post.curtida.Curtida" ancestor="false" source="manual">
+        <property name="conteudoId" direction="asc"/>
+        <property name="data" direction="desc"/>
+    </datastore-index>
+
+    <datastore-index kind="br.com.dextra.dextranet.conteudo.post.comentario.Comentario" ancestor="false" source="manual">
+        <property name="postId" direction="asc"/>
+        <property name="dataDeCriacao" direction="asc"/>
+    </datastore-index>
+
+	<datastore-index kind="br.com.dextra.dextranet.conteudo.post.Post" ancestor="false" source="manual">
+		<property name="postId" direction="asc"/>
+        <property name="dataDeCriacao" direction="desc"/>
+    </datastore-index>
+
+</datastore-indexes>

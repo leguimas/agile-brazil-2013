@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<engine>
+	<template selector="#content_left">
+	    <h1 class="titulo">${messages.banner_lista_titulo}</h1>
+	    <table class="datatable" border="0" cellspacing="0" cellpadding="0">
+	        <thead>
+	            <tr>
+	                <th scope="col" class="sortable">${messages.banner_titulo}</th>
+	                <th scope="col" class="sortable">${messages.banner_dataInicio}</th>
+	                <th scope="col" class="sortable">${messages.banner_dataFim}</th>
+	                <th scope="col">${messages.banner_link}</th>
+	                <th scope="col" class="sortable">${messages.banner_criadoPor}</th>
+	                <th scope="col">${messages.label_acoes}</th>
+	            </tr>
+            </thead>
+            <tbody>
+                {if banners.length == 0}
+                    <tr>
+                        <td colspan="6">${messages.mensagem_nenhum_registro}</td>
+                    </tr>
+                {/if}
+                {for banner in banners}
+                    <tr>
+                        <td>${banner.titulo}</td>
+                        <td>${banner.dataInicio}</td>
+                        <td>${banner.dataFim}</td>
+                        <td>${banner.link}</td>
+                        <td>${banner.usuario}</td>
+                        <td class="action">
+                            <a href="${banner.imagemUrl}" target="_blank" class="btdownload" original-title="${messages.banner_imagem_acao}">${messages.botao_visualizar}</a>
+                            <a href="#!" id="${banner.id}" class="btremove" original-title="${messages.botao_excluir}">${messages.botao_excluir}</a>
+                        </td>
+                    </tr>
+                {/for}
+            </tbody>
+	    </table>
+	</template>
+
+	<script>
+        if ( this.banners.length == 0 ) {
+            $('.message').message($.i18n.messages.mensagem_nenhum_registro, 'info', true);
+        }
+
+        $(".datatable").datatableSortable();
+        $(".datatable").delegate("a.btremove", "click", function() { dextranet.banner.remover($(this).attr("id")); } );
+        $('.action a').tipsy();
+	</script>
+	
+</engine>
