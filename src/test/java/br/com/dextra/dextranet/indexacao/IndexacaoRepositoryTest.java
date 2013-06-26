@@ -4,6 +4,7 @@ import java.util.List;
 
 import junit.framework.Assert;
 
+import org.junit.After;
 import org.junit.Test;
 
 import br.com.dextra.dextranet.conteudo.post.Post;
@@ -18,6 +19,12 @@ public class IndexacaoRepositoryTest extends TesteIntegracaoBase {
 	private PostRepository repositorioDePosts = new PostRepository();
 	private IndexacaoRepository repositorioDeIndex = new IndexacaoRepository();
 	private ComentarioRepository repositorioDeComentarios = new ComentarioRepository();
+
+	@After
+	public void removeDadosInseridos() {
+		this.limpaPostsInseridos(repositorioDePosts);
+		this.limpaComentariosInseridos(repositorioDeComentarios);
+	}
 
 	@Test
 	public void testaBuscaPostsIndexados() {
