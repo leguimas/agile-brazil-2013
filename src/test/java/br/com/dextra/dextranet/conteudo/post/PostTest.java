@@ -25,8 +25,7 @@ public class PostTest extends TesteIntegracaoBase {
 		Assert.assertEquals("39566cf6ac41da40deb7c6452a9ed94b", novoPost.getUsuarioMD5());
 		Assert.assertEquals(0, novoPost.getQuantidadeDeComentarios());
 		Assert.assertEquals(0, novoPost.getQuantidadeDeCurtidas());
-		Assert.assertEquals(timeMachine.formataData(timeMachine.dataAtual()),
-				timeMachine.formataData(novoPost.getDataDeCriacao()));
+		Assert.assertTrue(novoPost.getDataDeCriacao().before(timeMachine.dataAtual()));
 	}
 
 	@Test
