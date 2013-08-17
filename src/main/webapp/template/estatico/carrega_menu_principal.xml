@@ -36,6 +36,9 @@
                 </li>
 			</ul>
 		</li>
+        <li>
+            <a href="http://www.caipiraagil.com.br" target="_blank">Caipira Agil</a>
+        </li>
 	</template>
 	<script>
 	$(document).ready(function() {
