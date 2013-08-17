@@ -36,9 +36,6 @@
                 </li>
 			</ul>
 		</li>
-        <li>
-            <a href="http://www.agilebrazil.com/2013/" target="_blank">Agile Brazil</a>
-        </li>
 	</template>
 	<script>
 	$(document).ready(function() {
